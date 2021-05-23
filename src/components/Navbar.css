@@ -1,0 +1,30 @@
+.navbar{
+    width:1300px;
+    max-width: 100%;
+    display:flex;
+}
+
+.navbar-logo, .navbar-logo a{
+    display: flex;
+    flex:0.5;
+    text-decoration: none;
+}
+
+.navbar-logo h1{
+    margin-left:4rem;
+    color:#7aeef0;
+}
+
+.navbar-components{
+    display:flex;
+    justify-content: space-around;
+    flex:0.5
+}
+
+.navbar-components p, .navbar-components a{
+    font-family: 'Roboto';
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:#0574ad;
+    text-decoration: none;
+}

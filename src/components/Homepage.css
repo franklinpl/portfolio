@@ -1,0 +1,29 @@
+.homepage{
+    width:1300px;
+    max-width:100%;
+    height:100vh;
+}
+
+.homepage h1, .homepage p{
+    text-align: left;
+    margin-left:10rem;
+    margin-top:6rem
+}
+
+.homepage h1{
+    font-size:5rem;
+    color:#0574ad;
+    font-family: 'Montserrat'
+}
+
+.homepage p{
+    font-size:1.5rem;
+    color: #7aeef0;
+    margin-top: -1rem;
+    font-weight: 500;
+    font-family: 'Roboto'
+}
+
+.homepage p a{
+    text-decoration: none;
+}
