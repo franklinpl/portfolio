@@ -2,17 +2,23 @@
     width:1300px;
     max-width: 100%;
     display:flex;
+    align-items: center;
+    background-color: #3e3e3e;
+    height:10vh
 }
 
 .navbar-logo, .navbar-logo a{
     display: flex;
-    flex:0.5;
+    flex:0.8;
     text-decoration: none;
 }
 
 .navbar-logo h1{
     margin-left:4rem;
-    color:#7aeef0;
+    color:rgba(0, 0, 0, 0.925);
+    font-family: 'Open Sans', sans-serif;
+    color:#f8f8f8;
+    font-weight: 400;
 }
 
 .navbar-components{
@@ -24,7 +30,27 @@
 .navbar-components p, .navbar-components a{
     font-family: 'Roboto';
     font-size: 1.4rem;
-    font-weight: 600;
-    color:#0574ad;
+    font-family: 'Open Sans', sans-serif;
+    color:#f8f8f8;
     text-decoration: none;
+}
+
+@media(max-width:650px){
+    .navbar-logo h1{margin-left:2rem}
+}
+
+@media(max-width:547px){
+    .navbar-logo h1{font-size: 1.8rem;}
+    .navbar-components p{font-size:1.2rem}
+}
+
+@media(max-width:465px){
+    .navbar-logo h1{margin-left:1rem; font-size:1.5rem}
+    .navbar-components p{font-size: 1.1rem;}
+}
+
+@media(max-width:365px){
+    .navbar-logo h1{margin-left:0.5rem; font-size:1.4rem}
+    .navbar-components p{font-size: 1rem}
+    .navbar-logo{flex:0.6}
 }

@@ -1,0 +1,74 @@
+import './Contact.css'
+import {useState} from 'react'
+import * as emailjs from 'emailjs-com'
+import franklinTransparent from '../pictures/franklin_foto.jpeg'
+
+function Contact(){
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [emailSent, setEmailSent] = useState(false)
+    const [loading, setLoading] = useState(false)
+
+    const submitForm = (e) => {
+        e.preventDefault()
+        setLoading(true)
+        let template_params = {
+            name: name,
+            email: email,
+            message: message
+        }
+        emailjs.sendForm('gmail', 'template_jit7267',e.target,'user_ei2HwlX5HUA6Vb2BoNWPR', template_params).then((result) => {
+            setEmailSent(true)
+            console.log(result)
+            setName('')
+            setEmail('')
+            setMessage('')
+            setLoading(false)
+        }, (error) => {
+            console.log(error)
+        })
+
+    }
+
+    return(
+        <div className='contact'>
+            <h1 id='contact'>Contact</h1>
+            <div className='form-and-info'>
+                <form onSubmit={submitForm}>
+                    {emailSent ? <h3 id='email-sent'>Email sent successfully</h3> : ''}
+                    <div className='name'>
+                        <label htmlFor='name'>Name</label>
+                        <input type='text' name='name' id='name' required
+                        onChange={(e) => setName(e.target.value)} value={name}/>
+                    </div>
+                    <div className='email'>
+                        <label htmlFor='email'>Email</label>
+                        <input type='email' name='email' id='email' required 
+                        onChange={(e) => setEmail(e.target.value)} value={email}/>
+                    </div>
+                    <div className='message'>
+                        <label htmlFor='message'>Message</label>
+                        <textarea name='message' id='message' required
+                        onChange={(e) => setMessage(e.target.value)} value={message}/>
+                    </div>
+                    <button id='contact-button'>{loading ? 'Sending...' : 'Send'}</button>
+                </form>
+                
+                <div className='picture-and-info'>
+                    <img src={franklinTransparent} alt='developer' id='franklin-picture'/>
+                    <p>Franklin Peroza Lima</p>
+                    <div className='phone'>
+                        <img src='https://img.icons8.com/ios/452/apple-phone.png'/>
+                        <p style={{marginLeft:5}}>+43 073 100 66467</p>
+                    </div>
+                    <p>franklindev30@gmail.com</p>
+                </div>
+            
+            </div>
+        </div>
+    )
+}
+
+export default Contact

@@ -1,7 +1,11 @@
-.App {
-  text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url('https://cdn.pixabay.com/photo/2018/05/14/16/54/cyber-3400789_960_720.jpg');
-  background-size: cover;
+html{
+    scroll-behavior: smooth;
 }
 
+.App{
+    background-color: #e8e8e8;
+    width:1300px;
+    max-width:100%;
+    height:auto
+}
 

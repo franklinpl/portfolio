@@ -1,0 +1,105 @@
+.projects{
+    width:1300px;
+    max-width:100%;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.projects h1{
+    font-size:3rem;
+    margin:120px 0px 0px 0px;
+    align-self: center;
+    color:#3e3e3e
+}
+
+.paralel-universe{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width:1300px;
+    max-width:100%
+}
+
+.paralel-universe div a{
+    margin-top:30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    transition: filter 0.5s;
+    text-decoration: none;
+    color:black;
+    width:350px;
+    height:auto
+}
+
+#image:hover{
+    filter:brightness(50%);
+}
+
+.paralel-universe div p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+#div-text{
+    top:100px;
+    font-size:2rem
+}
+
+#image{
+    width:350px;
+    height:200px;
+    align-self: center;
+    justify-self: center;
+}
+
+#retracted-text{
+    width:350px
+}
+
+#project-icon{
+    cursor:pointer;
+    display:block
+}
+
+@media (max-width:1120px){
+    #image{width:300px; height:175px}
+    #retracted-text{width:300px}
+    .paralel-universe div a{width:300px}
+}
+
+@media(max-width:1000px){
+    .projects h1{font-size: 2.5rem; width:17rem}
+}
+
+@media(max-width:961px){
+    .paralel-universe{grid-template-columns: repeat(1, 1fr);}
+    #image{width: 600px; height:auto; margin:0px}
+    #retracted-text{width:600px}
+    .paralel-universe div a{width:600px}
+    .projects h1{text-align: center;}
+}
+
+@media(max-width:650px){
+    .projects h1{font-size:2.2rem}
+    #div-text{font-size:1.8rem}
+    #image, .paralel-universe div a{width: 500px;}
+    #retracted-text{width:500px}
+}
+
+@media(max-width:547px){
+    .projects h1{font-size:2rem}
+    #image, .paralel-universe div a{width: 400px;}
+    #retracted-text{width:400px}
+}
+
+@media(max-width:435px){
+    .projects h1{font-size:2rem; margin-bottom: -10px;}
+    #image, .paralel-universe div a{width: 300px;}
+    #retracted-text{width:300px}
+    #retracted-text{width: 300px;}
+    #div-text{font-size:1.6rem}
+    .paralel-universe div p{font-size:1.1rem}
+}
